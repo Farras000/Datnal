@@ -27,7 +27,6 @@ if uploaded_file:
     if st.button("Predict"):
         input_tensor = preprocess(img)
         
-        st.write("DEBUG SHAPE:", input_tensor.shape)  # DEBUG
 
         pred = model.predict(input_tensor)
         class_id = np.argmax(pred)
@@ -35,4 +34,5 @@ if uploaded_file:
 
         st.success(f"Prediction: **{class_names[class_id]}**")
         st.info(f"Confidence: {confidence:.4f}")
+
 
