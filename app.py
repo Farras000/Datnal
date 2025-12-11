@@ -34,4 +34,8 @@ if uploaded_file:
         st.success(f"Prediction: **{class_names[class_id]}**")
         st.info(f"Confidence: {confidence:.4f}")
 
+st.write("DEBUG SHAPE:", input_tensor.shape)
+
+
+
 
