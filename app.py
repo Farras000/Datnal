@@ -6,7 +6,7 @@ import numpy as np
 
 model = load_model('model_1.keras')
 
-class_names = ["Meningioma", "Glioma", "Pituitary"]
+class_names = ["Glioma", "Meningioma", "Pituitary"]
 
 def preprocess(img):
     img = img.resize((224, 224))            
@@ -27,6 +27,7 @@ if uploaded_file:
     if st.button("Predict"):
         input_tensor = preprocess(img)
         
+        st.write("DEBUG SHAPE:", input_tensor.shape)  
 
         pred = model.predict(input_tensor)
         class_id = np.argmax(pred)
@@ -34,5 +35,3 @@ if uploaded_file:
 
         st.success(f"Prediction: **{class_names[class_id]}**")
         st.info(f"Confidence: {confidence:.4f}")
-
-
