@@ -1,5 +1,6 @@
 import streamlit as st
 from tensorflow.keras.models import load_model
+from tensorflow.keras.applications.efficientnet_v2 import preprocess_input
 from PIL import Image
 import numpy as np
 
@@ -32,4 +33,5 @@ if uploaded_file:
 
         st.success(f"Prediction: **{class_names[class_id]}**")
         st.info(f"Confidence: {confidence:.4f}")
+
 
