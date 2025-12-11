@@ -6,7 +6,7 @@ import numpy as np
 
 model = load_model('model_1.keras')
 
-class_names = ["Glioma", "Meningioma", "Pituitary"]
+class_names = ["meningioma", "gioma", "Pituitary"]
 
 def preprocess(img):
     img = img.resize((224, 224))            
@@ -35,3 +35,4 @@ if uploaded_file:
 
         st.success(f"Prediction: **{class_names[class_id]}**")
         st.info(f"Confidence: {confidence:.4f}")
+
