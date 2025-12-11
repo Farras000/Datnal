@@ -14,7 +14,7 @@ def preprocess(img):
     img = np.expand_dims(img, axis=0)
     return img
 
-# UI
+
 st.title("Brain Tumor Classification App")
 st.write("Upload gambar MRI otak untuk mendeteksi jenis tumor.")
 
