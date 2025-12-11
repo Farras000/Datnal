@@ -5,7 +5,7 @@ from PIL import Image
 import numpy as np
 
 
-model = load_model("model_1.keras")
+model = load_model('model_1.keras')
 
 class_names = ["Glioma", "Meningioma", "Pituitary"]
 
@@ -35,6 +35,7 @@ if uploaded_file:
         st.info(f"Confidence: {confidence:.4f}")
 
 st.write("DEBUG SHAPE:", input_tensor.shape)
+
 
 
 
